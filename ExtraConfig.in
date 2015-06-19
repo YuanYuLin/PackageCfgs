@@ -1,0 +1,6 @@
+menu "extra packages"
+
+source "package/omxplayer/Config.in"
+source "package/ffmpeg2/Config.in"
+
+endmenu
