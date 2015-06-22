@@ -8,6 +8,7 @@ LIBIOPCMSGBUS_VERSION       = 89375eeba2eb71542fc3eac4125f06cc696db8cf
 LIBIOPCMSGBUS_SITE          = $(call github,YuanYuLin,libiopcmsgbus,$(LIBIOPCMSGBUS_VERSION))
 LIBIOPCMSGBUS_LICENSE       = GPLv2+
 LIBIOPCMSGBUS_LICENSE_FILES = COPYING
+LIBIOPCMSGBUS_INSTALL_STAGING = YES
 
 LIBIOPCMSGBUS_DEPENDENCIES  = host-pkgconf 
 
@@ -30,6 +31,12 @@ LIBIOPCMSGBUS_MAKE_ENV =                        \
 
 define LIBIOPCMSGBUS_BUILD_CMDS
 	$(LIBIOPCMSGBUS_MAKE_ENV) $(MAKE) -C $(@D)
+endef
+
+define LIBIOPCMSGBUS_INSTALL_STAGING_CMDS
+	$(INSTALL) -m 0755 -D $(@D)/libiopcmsgbus.so* $(STAGING_DIR)/usr/lib/
+	@mkdir -p $(STAGING_DIR)/usr/include/iopcmsgbus
+	$(INSTALL) -m 0644 -D $(@D)/*.h $(STAGING_DIR)/usr/include/iopcmsgbus
 endef
 
 define LIBIOPCMSGBUS_INSTALL_TARGET_CMDS
