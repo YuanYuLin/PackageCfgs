@@ -1,0 +1,7 @@
+menu "extra packages"
+
+source "package/webgui/Config.in"
+source "package/iopcmsgbus/Config.in"
+source "package/libiopcmsgbus/Config.in"
+
+endmenu

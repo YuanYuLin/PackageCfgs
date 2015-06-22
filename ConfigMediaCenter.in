@@ -1,0 +1,8 @@
+menu "mediacenter packages"
+
+source "package/omxplayer/Config.in"
+source "package/ffmpeg2/Config.in"
+source "package/iopcmsgbus/Config.in"
+source "package/libiopcmsgbus/Config.in"
+
+endmenu
