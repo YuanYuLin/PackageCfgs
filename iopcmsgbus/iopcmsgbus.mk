@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-IOPCMSGBUS_VERSION       = 8cba44a967d22795b3214532e3eb651f9b03ff23
+IOPCMSGBUS_VERSION       = 7f6646f631500fa99f0b47f2b8d7b9f1865595cb
 IOPCMSGBUS_SITE          = $(call github,YuanYuLin,iopcmsgbus,$(IOPCMSGBUS_VERSION))
 IOPCMSGBUS_LICENSE       = GPLv2+
 IOPCMSGBUS_LICENSE_FILES = COPYING
