@@ -1,0 +1,4 @@
+config BR2_PACKAGE_LIBIOPCCFG
+	bool "libiopccfg"
+	help
+	  library of IOPC configuration util.

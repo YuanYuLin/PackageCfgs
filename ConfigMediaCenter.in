@@ -4,5 +4,7 @@ source "package/omxplayer/Config.in"
 source "package/ffmpeg2/Config.in"
 source "package/iopcmsgbus/Config.in"
 source "package/libiopcmsgbus/Config.in"
+source "package/iopccfg/Config.in"
+source "package/libiopccfg/Config.in"
 
 endmenu
