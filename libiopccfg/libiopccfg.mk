@@ -10,7 +10,7 @@ LIBIOPCCFG_LICENSE       = GPLv2+
 LIBIOPCCFG_LICENSE_FILES = COPYING
 LIBIOPCCFG_INSTALL_STAGING = YES
 
-LIBIOPCCFG_DEPENDENCIES  = host-pkgconf 
+LIBIOPCCFG_DEPENDENCIES  = host-pkgconf json-c
 
 LIBIOPCCFG_EXTRA_CFLAGS =                                        \
 	-DTARGET_LINUX -DTARGET_POSIX                           \
