@@ -1,8 +1,25 @@
 menu "extra packages"
+	menu "Host"
+		source "package/iopcmsgbus/Config.in"
+		source "package/libiopcmsgbus/Config.in"
+		source "package/iopccfg/Config.in"
+		source "package/libiopccfg/Config.in"
+	endmenu
 
-source "package/omxplayer/Config.in"
-source "package/ffmpeg2/Config.in"
-source "package/iopcmsgbus/Config.in"
-source "package/libiopcmsgbus/Config.in"
+	menu "Web Container"
+		source "package/webgui/Config.in"
+		source "package/iopcmsgbus/Config.in"
+		source "package/libiopcmsgbus/Config.in"
+		source "package/iopccfg/Config.in"
+		source "package/libiopccfg/Config.in"
+	endmenu
 
+	menu "MediaCenter Container"
+		source "package/omxplayer/Config.in"
+		source "package/ffmpeg2/Config.in"
+		source "package/iopcmsgbus/Config.in"
+		source "package/libiopcmsgbus/Config.in"
+		source "package/iopccfg/Config.in"
+		source "package/libiopccfg/Config.in"
+	endmenu
 endmenu
