@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-IOPCCFG_VERSION       = f04b5c9636aeedc7cab7a3fd7da4ce6d8baddb71
+IOPCCFG_VERSION       = 6c82c2e0131229565fe6fda059535796dace0ca3
 IOPCCFG_SITE          = $(call github,YuanYuLin,iopccfg,$(IOPCCFG_VERSION))
 IOPCCFG_LICENSE       = GPLv2+
 IOPCCFG_LICENSE_FILES = COPYING
@@ -31,7 +31,7 @@ define IOPCCFG_BUILD_CMDS
 endef
 
 define IOPCCFG_INSTALL_TARGET_CMDS
-	$(INSTALL) -m 0755 -D $(@D)/iopccfg.elf $(TARGET_DIR)/usr/bin/iopccfg
+	$(INSTALL) -m 0755 -D $(@D)/iopccfg.elf $(TARGET_DIR)/usr/local/bin/iopccfg
 endef
 
 $(eval $(generic-package))

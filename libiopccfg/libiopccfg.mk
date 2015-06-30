@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-LIBIOPCCFG_VERSION       = f96b792bea84e73bf46649de0a38a3edbbdb5bd6
+LIBIOPCCFG_VERSION       = b45d4e3c525269a612b7b3ea11b176a21ff4c723
 LIBIOPCCFG_SITE          = $(call github,YuanYuLin,libiopccfg,$(LIBIOPCCFG_VERSION))
 LIBIOPCCFG_LICENSE       = GPLv2+
 LIBIOPCCFG_LICENSE_FILES = COPYING

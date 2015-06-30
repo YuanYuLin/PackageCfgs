@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-LIBIOPCMSGBUS_VERSION       = 89375eeba2eb71542fc3eac4125f06cc696db8cf
+LIBIOPCMSGBUS_VERSION       = 141ec8fa48917eb356d1e134b7ffbdbf27fc7e4e
 LIBIOPCMSGBUS_SITE          = $(call github,YuanYuLin,libiopcmsgbus,$(LIBIOPCMSGBUS_VERSION))
 LIBIOPCMSGBUS_LICENSE       = GPLv2+
 LIBIOPCMSGBUS_LICENSE_FILES = COPYING
@@ -14,8 +14,6 @@ LIBIOPCMSGBUS_DEPENDENCIES  = host-pkgconf
 
 LIBIOPCMSGBUS_EXTRA_CFLAGS =                                        \
 	-DTARGET_LINUX -DTARGET_POSIX                           \
-	$(shell $(PKG_CONFIG_HOST_BINARY) --cflags bcm_host)    \
-	$(shell $(PKG_CONFIG_HOST_BINARY) --cflags freetype2)   \
 
 
 LIBIOPCMSGBUS_MAKE_ENV =                        \

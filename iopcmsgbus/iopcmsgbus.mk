@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-IOPCMSGBUS_VERSION       = 7f6646f631500fa99f0b47f2b8d7b9f1865595cb
+IOPCMSGBUS_VERSION       = a64edfd66317519baff44231970d12f638268677
 IOPCMSGBUS_SITE          = $(call github,YuanYuLin,iopcmsgbus,$(IOPCMSGBUS_VERSION))
 IOPCMSGBUS_LICENSE       = GPLv2+
 IOPCMSGBUS_LICENSE_FILES = COPYING
@@ -13,8 +13,6 @@ IOPCMSGBUS_DEPENDENCIES  = host-pkgconf libiopcmsgbus
 
 IOPCMSGBUS_EXTRA_CFLAGS =                                        \
 	-DTARGET_LINUX -DTARGET_POSIX                           \
-	$(shell $(PKG_CONFIG_HOST_BINARY) --cflags bcm_host)    \
-	$(shell $(PKG_CONFIG_HOST_BINARY) --cflags freetype2)   \
 
 
 IOPCMSGBUS_MAKE_ENV =                        \
@@ -33,7 +31,7 @@ define IOPCMSGBUS_BUILD_CMDS
 endef
 
 define IOPCMSGBUS_INSTALL_TARGET_CMDS
-	$(INSTALL) -m 0755 -D $(@D)/iopcmsgbus.elf $(TARGET_DIR)/usr/bin/iopcmsgbus
+	$(INSTALL) -m 0755 -D $(@D)/iopcmsgbus.elf $(TARGET_DIR)/usr/local/bin/iopcmsgbus
 endef
 
 $(eval $(generic-package))
