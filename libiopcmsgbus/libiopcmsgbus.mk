@@ -16,7 +16,8 @@ LIBIOPCMSGBUS_EXTRA_CFLAGS =                                        \
 	-DTARGET_LINUX -DTARGET_POSIX                           \
 
 
-LIBIOPCMSGBUS_MAKE_ENV =                        \
+LIBIOPCMSGBUS_MAKE_ENV =                    \
+	CROSS_COMPILE=$(TARGET_CROSS)       \
 	BUILDROOT=$(TOP_DIR)                \
 	SDKSTAGE=$(STAGING_DIR)             \
 	TARGETFS=$(TARGET_DIR)              \

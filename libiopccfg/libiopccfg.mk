@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-LIBIOPCCFG_VERSION       = b45d4e3c525269a612b7b3ea11b176a21ff4c723
+LIBIOPCCFG_VERSION       = db2c9a171842bf871c34ce30f9579f2ce6772d6a
 LIBIOPCCFG_SITE          = $(call github,YuanYuLin,libiopccfg,$(LIBIOPCCFG_VERSION))
 LIBIOPCCFG_LICENSE       = GPLv2+
 LIBIOPCCFG_LICENSE_FILES = COPYING
@@ -16,7 +16,8 @@ LIBIOPCCFG_EXTRA_CFLAGS =                                        \
 	-DTARGET_LINUX -DTARGET_POSIX                           \
 
 
-LIBIOPCCFG_MAKE_ENV =                        \
+LIBIOPCCFG_MAKE_ENV =                       \
+	CROSS_COMPILE=$(TARGET_CROSS)       \
 	BUILDROOT=$(TOP_DIR)                \
 	SDKSTAGE=$(STAGING_DIR)             \
 	TARGETFS=$(TARGET_DIR)              \

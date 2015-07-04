@@ -15,7 +15,8 @@ IOPCMSGBUS_EXTRA_CFLAGS =                                        \
 	-DTARGET_LINUX -DTARGET_POSIX                           \
 
 
-IOPCMSGBUS_MAKE_ENV =                        \
+IOPCMSGBUS_MAKE_ENV =                       \
+	CROSS_COMPILE=$(TARGET_CROSS)       \
 	BUILDROOT=$(TOP_DIR)                \
 	SDKSTAGE=$(STAGING_DIR)             \
 	TARGETFS=$(TARGET_DIR)              \

@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-IOPCCFG_VERSION       = 6c82c2e0131229565fe6fda059535796dace0ca3
+IOPCCFG_VERSION       = 1ea11c4fef6755ff56f63565267097dd79ebc1e5
 IOPCCFG_SITE          = $(call github,YuanYuLin,iopccfg,$(IOPCCFG_VERSION))
 IOPCCFG_LICENSE       = GPLv2+
 IOPCCFG_LICENSE_FILES = COPYING
@@ -15,7 +15,8 @@ IOPCCFG_EXTRA_CFLAGS =                                        \
 	-DTARGET_LINUX -DTARGET_POSIX                           \
 
 
-IOPCCFG_MAKE_ENV =                        \
+IOPCCFG_MAKE_ENV =                          \
+	CROSS_COMPILE=$(TARGET_CROSS)       \
 	BUILDROOT=$(TOP_DIR)                \
 	SDKSTAGE=$(STAGING_DIR)             \
 	TARGETFS=$(TARGET_DIR)              \
@@ -31,7 +32,7 @@ define IOPCCFG_BUILD_CMDS
 endef
 
 define IOPCCFG_INSTALL_TARGET_CMDS
-	$(INSTALL) -m 0755 -D $(@D)/iopccfg.elf $(TARGET_DIR)/usr/local/bin/iopccfg
+	$(INSTALL) -m 0755 -D $(@D)/iopccfg.elf	$(TARGET_DIR)/usr/local/bin/iopccfg
 endef
 
 $(eval $(generic-package))

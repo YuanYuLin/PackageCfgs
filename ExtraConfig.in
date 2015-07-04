@@ -4,6 +4,7 @@ menu "extra packages"
 		source "package/libiopcmsgbus/Config.in"
 		source "package/iopccfg/Config.in"
 		source "package/libiopccfg/Config.in"
+		source "package/libiopccfg_host/Config.in"
 	endmenu
 
 	menu "Web Container"
